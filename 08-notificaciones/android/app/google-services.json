@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "869440119294",
+    "firebase_url": "https://pruebasyejercicios.firebaseio.com",
+    "project_id": "pruebasyejercicios",
+    "storage_bucket": "pruebasyejercicios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869440119294:android:4393bce64064d7106b60af",
+        "android_client_info": {
+          "package_name": "com.kiuvox.notificaciones"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869440119294-cst1ju76t0pb43hgpjq9rabmqldbkvtq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kiuvox.notificaciones",
+            "certificate_hash": "4f7da10830902527ff64e3caba18e3d884fa4aa2"
+          }
+        },
+        {
+          "client_id": "869440119294-srvk1o8bd4novshbl7dd1a4jervkfee6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe-tcuiRwn2AW4fHZaUkBEgt4x33v2_eA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869440119294-srvk1o8bd4novshbl7dd1a4jervkfee6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
