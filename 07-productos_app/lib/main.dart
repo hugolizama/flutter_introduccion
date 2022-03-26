@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../screens/screens.dart';
 import '../services/services.dart';
- 
-void main() => runApp(AppState());
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+void main() async {
+  await dotenv.load(fileName: ".env");
+  runApp(AppState());
+}
 
 class AppState extends StatelessWidget {
   @override
@@ -11,15 +15,20 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         // lazy en false indica que se ejecute inmediatamente, en true se ejecutaria hasta ser utilizado
-        ChangeNotifierProvider(create: (_) => AuthService(), lazy: false,),
-        ChangeNotifierProvider(create: (_) => ProductsService(), lazy: true,),
+        ChangeNotifierProvider(
+          create: (_) => AuthService(),
+          lazy: false,
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ProductsService(),
+          lazy: true,
+        ),
       ],
-
       child: MyApp(),
     );
   }
 }
- 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -28,11 +37,11 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       initialRoute: 'login',
       routes: {
-        'login': ( _ ) => LoginScreen(),
-        'register': ( _ ) => RegisterScreen(),
-        'home': ( _ ) => HomeScreen(),
-        'product': ( _ ) => ProductScreen(),
-        'checking': ( _ ) => CheckAuthScreen(),
+        'login': (_) => LoginScreen(),
+        'register': (_) => RegisterScreen(),
+        'home': (_) => HomeScreen(),
+        'product': (_) => ProductScreen(),
+        'checking': (_) => CheckAuthScreen(),
       },
       scaffoldMessengerKey: NotificationsService.messengerKey,
       theme: ThemeData.light().copyWith(
@@ -45,7 +54,6 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.indigo,
           elevation: 0,
         ),
-        
       ),
     );
   }
